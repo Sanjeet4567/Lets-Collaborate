@@ -1,22 +1,25 @@
 import "./bodyPrint.css"
-import img from './media/img1.jpg'
+import pointer from './media/pointerArrow.svg'
+
 function BodyPrint(props){
     return(
         <>
+        
         <div className="outer">
-        <div className="leftContainer">
-          <div className="leftHeading"><h3>AI + RPA is what we do</h3></div>
-          <div className="leftImage">
-            <img className="phoneImage" src={img} alt="AI Robot" />
+          <div className="leftContainer">
+            <div className="leftHeading"><h2>{props.leftHeading}</h2></div>
+            <div className="leftImage">
+              <img className="phoneImage" src={props.image} alt="AI Robot" />
+            </div>
+            <div className="leftBody">
+              <h3>{props.leftBody}</h3>
+            </div>
+            <div className="leftFooter"><p>{props.leftFooter}</p>
+            <a href="/"><img src={pointer} className="pointer" alt="arrow" /></a></div>
           </div>
-          <div className="leftBody">
-            <p>Future-Proof your business. Drive efficiency, profitability and deliver on customer experience</p>
+          <div className="rightContainer">
+            <img className="pcImage" src={props.image} alt="AI Robot" />
           </div>
-          <div className="leftFooter">AI + RPA Automation</div>
-        </div>
-        <div className="rightContainer">
-          <img className="pcImage" src={img} alt="AI Robot" />
-        </div>
         </div>
         
         </>

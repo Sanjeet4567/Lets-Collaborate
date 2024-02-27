@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     
+    
 }
 .phoneImage{
     display: none;
@@ -10,7 +11,108 @@
     display: flex;
     flex-direction: column;
 }
-@media screen and (max-width:700px){
+h3{
+font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.6rem;
+    padding-left: 0;
+    padding-top: 2.4rem;
+}
+h2:hover{
+    transform: scale(1.04);
+    
+  }
+@media screen and (min-width:1110px) {
+    h2:hover{
+        box-shadow:0px 3px 0px -1px rgba(0,0,0,0.3);
+    }
+    .leftContainer{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .outer{
+        padding-left:10%;
+        padding-right:10%;
+    }
+}
+@media screen and(883px <= width <= 1110px) {
+    h2:hover{
+        box-shadow:0px 3px 0px -1px rgba(0,0,0,0.3);
+    }
+    .leftContainer{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .outer{
+        
+        padding-left:5%;
+        padding-right:5%;
+    }
+}
+
+
+h2{
+    cursor: pointer;
+    font-size: 300%;
+    font-weight: 300;
+    line-height: 1.2em;
+    margin: 0;
+    padding-right: 3rem;
+    padding-top: 0.4rem;
+    
+}
+p{
+    display:inline;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding:2.4rem 0rem 0.6rem 0rem;
+    cursor:pointer;
+}
+p:hover{
+   opacity:0.6;
+}
+.phoneImage .pcImage{
+    height: 20rem;
+    width: 33.19125rem;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.pcImage{
+    height: 20rem;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+    transition: -webkit-transform 1.2s;
+    transition: transform 1.2s;
+    transition: transform 1.2s,-webkit-transform 1.2s;
+}
+.pointer{
+    padding-left:2.4rem;
+}
+.rightContainer:hover .pcImage{
+    transform: rotateY(180deg);
+}
+.outer{
+    animation: slide-up ease-in 0.5s;
+}
+
+@keyframes slide-up {
+    from{
+      opacity: 0.2;
+      transform: translateY(10rem);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+@media screen and (max-width:883px){
     .pcImage{
         display:None;
     }
