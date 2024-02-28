@@ -1,16 +1,21 @@
 .outer{
     display: flex;
     flex-direction: row;
-    
-    
+    flex:1 1 0;      
 }
+
 .phoneImage{
     display: none;
 }
 .leftContainer{
+    width:50%;
     display: flex;
     flex-direction: column;
 }
+.rightContainer{
+    width:50%;
+}
+
 h3{
 font-size: 1.1rem;
     font-weight: 500;
@@ -84,6 +89,7 @@ p:hover{
 }
 .pcImage{
     height: 20rem;
+    width: 33.19125rem;
     text-align: center;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -116,8 +122,19 @@ p:hover{
     .pcImage{
         display:None;
     }
+    .rightContainer{
+        display: none;
+    }
+    .leftContainer{
+        width:100%;
+    }
     .phoneImage{
-        max-width: 90%;
+        
+        
+        width: 100%;
         display: block;
+    }
+    .leftFooter{
+        padding-bottom: 40px;
     }
 }
