@@ -1,6 +1,6 @@
 import "./bodyPrint.css"
 import pointer from './media/pointerArrow.svg'
-
+// component for rendering each service
 function BodyPrint(props){
     return(
         <>

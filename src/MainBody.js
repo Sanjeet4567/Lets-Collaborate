@@ -5,6 +5,7 @@ import img3 from './media/third.jpg';
 import img4 from './media/fourth.jpg';
 import Navbar from "./Navbar";
 import { useState } from "react";
+import TypeWriter from "typewriter-effect"
 
 const divStyle={
     "display":"flex",
@@ -56,11 +57,24 @@ function MainBody(){
             <div style={divStyle}>
                 
                 <div>
-                <h4 style={h4}>Lets Collaborate</h4>
+                    {/* TypeWriter Effect */}
+                <h4 style={h4}><TypeWriter  onInit={(typewriter)=>{
+                    typewriter.typeString("Lets Collaborate").start();
+                    
+                }}/></h4>
+                 {/*Different Services  */}
                 <BodyPrint leftHeading="AI + RPA is what we do" image={img} leftBody="Future-Proof your business. Drive efficiency, profitability and deliver on customer experience" leftFooter="AI + RPA Automation" />
+
+
                 <BodyPrint leftHeading="Make Bolder Choices" image={img2} leftBody="Digital focused strategies to realize market-changing ideas" leftFooter="Build Better Apps" />
+
+
                 <BodyPrint leftHeading="Innovate With Speed" image={img3} leftBody="Create higher quality software, deliver on customer expectations and business goals" leftFooter="DevOps" />
+
+
                 <BodyPrint leftHeading="Embrace Cloud" image={img4} leftBody="With Cloud-First accelerate innovation and optimize performance" leftFooter="Cloud Services" />
+
+                {/* Dark Mode Button */}
                 <div><button type="button" className={`btn btn-${mode===true?`light`:`dark`}`} onClick={switcher} style={{border:`${mode===true?`1px solid black`:`1px solid white`}`}}>{text}</button></div>  
                 </div>
                 
